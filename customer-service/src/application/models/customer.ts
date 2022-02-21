@@ -1,3 +1,3 @@
-import { Customer } from "../../domain/entities/customer";
+import type { CustomerProps } from "domain/entities/customer"
 
-export type CustomerModel = Customer
+export type CustomerModel = CustomerProps

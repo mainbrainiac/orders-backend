@@ -1,5 +1,5 @@
-import { CustomerModel } from "../models/customer";
+import { CustomerModel } from "application/models/customer"
 
 export interface LoadCustomerRepository {
-  loadCustomerById: (id: string) => Promise<CustomerModel>;
+  loadCustomerById: (id: string) => Promise<CustomerModel>
 }

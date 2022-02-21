@@ -1,6 +1,6 @@
-import { Entity } from '../../core/entities/Entity';
+import { Entity } from 'core/entities/Entity'
 
-type CustomerProps = {
+export type CustomerProps = {
   name: string;
   email: string;
   phone: number;

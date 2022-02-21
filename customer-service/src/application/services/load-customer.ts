@@ -1,6 +1,6 @@
-import { LoadCustomer } from "../../domain/usecases/load-customer";
-import { Customer } from "../../domain/entities/customer";
-import { LoadCustomerRepository } from "../contracts/load-customer-repository";
+import { LoadCustomer } from "domain/usecases/load-customer"
+import { Customer } from "domain/entities/customer"
+import { LoadCustomerRepository } from "application/contracts/load-customer-repository"
 
 export class LoadCustomerService implements LoadCustomer {
   constructor(private readonly loadCustomerRepository: LoadCustomerRepository) {}
