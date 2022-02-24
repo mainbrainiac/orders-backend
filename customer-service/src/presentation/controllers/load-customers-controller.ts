@@ -3,7 +3,7 @@ import { Controller } from "presentation/contracts/controller";
 import { HttpResponse, ok, serverError } from "presentation/contracts/http";
 import { CustomerViewModel } from "presentation/view-models/customer";
 
-export class LoadCustomersController implements Controller {
+export class LoadCustomersController implements Controller<void> {
   constructor(private readonly loadCustomers: LoadCustomers) {}
 
   async handle(): Promise<HttpResponse<CustomerViewModel[]>> {

@@ -12,6 +12,7 @@ export class FakeCustomerRepository implements LoadCustomerRepository {
     }
 
     return {
+      id: customer.id,
       name: customer.fullName,
       email: customer.email,
       phone: customer.phone,
