@@ -1,4 +1,3 @@
-
 export const customers = [{
   id: '1',
   fullName: 'John Doe',

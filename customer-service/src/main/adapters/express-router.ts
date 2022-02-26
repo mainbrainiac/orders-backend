@@ -1,5 +1,4 @@
 import { Controller } from "presentation/contracts/controller"
-
 import { Request, Response } from "express"
 
  export const adaptRoute = (controller: Controller<any>) => {
