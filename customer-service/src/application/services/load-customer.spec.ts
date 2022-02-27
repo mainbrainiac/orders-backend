@@ -7,9 +7,12 @@ describe('LoadCustomerService', () => {
   }
   let loadCustomerService: LoadCustomerService;
 
+  beforeAll(() => {
+    loadCustomerService = new LoadCustomerService(mockRepository);
+  })
+
   beforeEach(() => {
     mockRepository.loadCustomerById.mockClear();
-    loadCustomerService = new LoadCustomerService(mockRepository);
   })
 
   it('should be defined', () => {
@@ -24,6 +27,19 @@ describe('LoadCustomerService', () => {
     const user = await loadCustomerService.load('1')
 
     expect(user).toEqual(mockUser1)
+  })
+
+  it('should throw error if customer not found', async () => {
+    const mockUser1 = TestUtil.giveMeAValidCustomer()
+
+    mockRepository.loadCustomerById.mockImplementation(id => [mockUser1].find(user => user.id === id))
+
+    try {
+      await loadCustomerService.load('error-test')
+    }
+    catch (error) {
+      expect(error).toBeInstanceOf(Error)
+    }
   })
 
   it('should be called loadCustomerById method only once', () => {

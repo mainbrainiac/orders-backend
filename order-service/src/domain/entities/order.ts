@@ -2,14 +2,8 @@ export type Order = {
   createdAt: Date;
   confirmedAt: Date;
   status: OrderStatus;
-  customer: Customer;
   items : OrderItem[];
-}
-
-export type Customer = {
-  name: string;
-  email: string;
-  phone: number;
+  customerId: string
 }
 
 export type OrderStatus = {

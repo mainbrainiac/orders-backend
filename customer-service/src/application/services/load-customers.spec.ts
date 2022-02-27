@@ -7,9 +7,12 @@ describe('LoadCustomersService', () => {
   }
   let loadCustomerService: LoadCustomersService;
 
+  beforeAll(() => {
+    loadCustomerService = new LoadCustomersService(mockRepository);
+  })
+
   beforeEach(() => {
     mockRepository.loadCustomers.mockClear();
-    loadCustomerService = new LoadCustomersService(mockRepository);
   })
 
   it('should be defined', () => {
