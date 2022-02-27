@@ -3,7 +3,8 @@ export type Order = {
   confirmedAt: Date;
   status: OrderStatus;
   items : OrderItem[];
-  customerId: string
+  customerId: string;
+  restaurantId: string;
 }
 
 export type OrderStatus = {

@@ -2,6 +2,7 @@ export const orders = [
   {
     id: '1',
     customerId: '1',
+    restaurantId: '1',
     status: {
       code: 'created',
       description: 'Order created',
@@ -24,6 +25,7 @@ export const orders = [
   {
     id: '2',
     customerId: '2',
+    restaurantId: '2',
     status: {
       code: 'pending',
       description: 'Order pending',

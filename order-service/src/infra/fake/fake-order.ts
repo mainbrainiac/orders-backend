@@ -3,9 +3,9 @@ import { OrderModel } from "@/application/models/order";
 import { orders } from "@/infra/data-sources/orders";
 import { OrderNotFound } from "@/infra/errors/order-not-found";
 
-export class FakeCustomerRepository implements LoadOrderRepository {
+export class FakeOrderRepository implements LoadOrderRepository {
   async loadOrderById (id: string): Promise<OrderModel> {
-    const order = orders.find(customer => customer.id === id)
+    const order = orders.find(order => order.id === id)
     
     if (!order) {
       throw new OrderNotFound();

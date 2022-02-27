@@ -2,7 +2,7 @@ import { LoadOrdersRepository } from "@/application/contracts/load-orders-reposi
 import { OrderModel } from "@/application/models/order";
 import { orders } from "@/infra/data-sources/orders";
 
-export class FakeCustomerRepository implements LoadOrdersRepository {
+export class FakeOrdersRepository implements LoadOrdersRepository {
   async loadOrders(): Promise<OrderModel[]> {
     return orders;
   };
